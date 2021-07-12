@@ -1,0 +1,35 @@
+<div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Search</h3>
+                        {{#if NotFound}}
+                            <p>Not found</p>>
+                            {{else}}
+                            <p>Please Fill Details</p>
+                        {{/if}}
+                        <form method = "POST" action = "/info/search" class="requires-validation" novalidate>
+
+                            <div class="col-md-12">
+                               <input class="form-control" type="number" name="class" placeholder="Class" required>
+                               <div class="valid-feedback">Class field is valid!</div>
+                               <div class="invalid-feedback">Class field cannot be blank!</div>
+                            </div><br>
+
+                            <div class="col-md-12">
+                                <input class="form-control" type="number" name="id" placeholder="Roll No" required>
+                                 <div class="valid-feedback">Roll No field is valid!</div>
+                                 <div class="invalid-feedback">Roll No field cannot be blank!</div>
+                            </div>
+
+                           
+                            <div class="form-button mt-3">
+                                <button id="submit" type="submit" class="btn btn-primary">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
