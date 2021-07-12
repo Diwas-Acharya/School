@@ -3,8 +3,8 @@ const route = require('./routes/apis.js')
 var bodyParser = require('body-parser');
 var path = require("path");
 var multer = require('multer');
-var hbs = require( 'express-handlebars' )
-cosnt port = process.env.PORT || 3000
+var hbs = require( 'express-handlebars' );
+const port = process.env.PORT || 3000;
 
 
 
