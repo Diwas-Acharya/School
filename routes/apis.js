@@ -2,15 +2,12 @@ var express = require('express');
 var path = require("path");
 var mongoose = require('mongoose');
 var assert = require("assert");
-
+require("../db/conn");
+// var Studentinfo = require("../models/studentSchema");
 var router = express.Router();
 
+var mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost/student',
- { useNewUrlParser: true , useUnifiedTopology: true  } ).catch((e)=>{
-    assert.ok(e , "promise error");
- });
- mongoose.set('useFindAndModify', false);
 var Student = mongoose.Schema({
     roll_no : {
         type : Number,
@@ -30,7 +27,10 @@ var Student = mongoose.Schema({
     }
 })
 
+
 var Studentinfo = mongoose.model("Student" , Student);
+
+
 
 
 router.get("get/:class/:roll_no" , (req , res) =>{

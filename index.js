@@ -1,12 +1,11 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const route = require('./routes/apis.js')
 var bodyParser = require('body-parser');
 var path = require("path");
 var multer = require('multer');
 var hbs = require( 'express-handlebars' );
 const port = process.env.PORT || 3000;
-
-
 
 var upload = multer();
 const app = express();

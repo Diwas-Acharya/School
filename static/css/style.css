@@ -13,16 +13,18 @@ html, body {
     height: 100%;
     background-color: #152733;
     overflow: hidden;
+   
 }
 
 
 .form-holder {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content:center;
       align-items: center;
       text-align: center;
       min-height: 100vh;
+
 }
 
 .form-holder .form-content {
@@ -37,9 +39,17 @@ html, body {
     justify-content: center;
     -webkit-align-items: center;
     align-items: center;
-    padding: 60px;
+    padding: 40px;
 }
-
+@media all and(min-width:480px) {
+    .form-holder{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        height: auto;
+    }
+    
+}
 .form-content .form-items {
     border: 3px solid #fff;
     padding: 40px;
